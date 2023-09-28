@@ -1,0 +1,217 @@
+:root {
+  --maroon: #6c0102;
+  --red: #c00000;
+  --black: #0f1417;
+  --white: #e1e1e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  background-color: whitesmoke;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--red);
+  color: var(--white);
+  padding: 0.5rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: -3px 2px 2px rgba(225, 225, 225, 0.5);
+}
+
+.navbar h3 {
+  font-weight: bolder;
+  font-family: "Playfair black", serif;
+  margin: 5px 0;
+}
+
+.navbar h6 {
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+/* Atlet */
+.cards {
+  background-color: whitesmoke;
+  padding: 4rem 7%;
+}
+
+.cards a {
+  text-decoration: none;
+}
+
+.cards .card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding-top: 1rem;
+}
+
+.cards .card {
+  margin: 0 auto; /* Mengatur margin di sekitar kartu */
+  flex: 0 0 auto; /* Agar kartu tidak membesar secara otomatis */
+  width: 90%; /* Lebar kartu */
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.4s;
+  background-color: white;
+  color: var(--black);
+  border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.cards .card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: translate(0px, -8px);
+}
+
+.cards .card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cards .card h1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  color: var(--red);
+}
+
+/* Profil Atlet */
+.cards .search {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards .search input {
+  width: 80%;
+  padding: 1px 10px;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+}
+
+.cards .search button {
+  padding: 2px 25px;
+  border: 1px solid var(--red);
+  border-radius: 3px;
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.cards .search button i {
+  padding-right: 8px;
+}
+
+.cards .message {
+  margin: 75px 0;
+  padding: 1rem 0;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Francois One";
+  text-align: center;
+  color: var(--red);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--red);
+  padding: 1rem 7% 1px;
+}
+.footer p {
+  text-align: center;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
+  .profil p {
+    font-size: 16px;
+  }
+
+  .card-slider .card .card-body .card-title {
+    font-size: 18px;
+  }
+
+  .cards .card {
+    margin-top: 2rem;
+  }
+
+  .cards {
+    margin: 4rem auto;
+  }
+
+  .cards .search input {
+    width: 70%;
+  }
+
+  .cards .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards .card-grid .card {
+    margin-bottom: 2rem;
+  }
+
+  .cards .card-grid .card h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  .cards .search input {
+    width: 75%;
+  }
+
+  .cards .search button {
+    padding: 2px 15px;
+  }
+
+  .cards .search button i {
+    padding: 0;
+  }
+
+  .cards .search button span {
+    display: none;
+  }
+
+  .cards .message {
+    font-size: 1.5rem;
+  }
+}
